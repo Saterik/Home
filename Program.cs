@@ -1,9 +1,11 @@
-// Напишите программу, которая выводит третью цифру заданного числа или сообщает, что третьей цифры нет.
+﻿//Напишите программу, которая принимает на вход цифру, обозначающую день недели, и проверяет, является ли этот день выходным.
 Console.WriteLine("Введите число");
-int num = Convert.ToInt32(Console.ReadLine());
-if (num < -99 || num > 99)
+int num = Math.Abs(Convert.ToInt32(Console.ReadLine()));
+if (num % 7 == 0 || (num + 1) % 7 == 0)
 {
-    if (num > 0) Console.WriteLine($"Третья цифра = {num.ToString()[2]}");
-    else Console.WriteLine($"Третья цифра = {num.ToString()[3]}");
+    Console.WriteLine("Выходной!!!");
 }
-else Console.WriteLine("Третьей цифры нет");
+else
+{
+    Console.WriteLine("Рабочий день");
+}
