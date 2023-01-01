@@ -1,12 +1,9 @@
-﻿//Напишите программу, которая принимает на вход трёхзначное число и на выходе показывает вторую цифру этого числа.
-//456 -> 5
-//782 -> 8
-//918 -> 1
-Console.Write("Введите трёхзначное число: ");
-int number = Convert.ToInt32(Console.ReadLine());
-number = number / 10;
- if(number / 10 < number % 10);
- Console.WriteLine(number % 10); 
-   
-
-   
+// Напишите программу, которая выводит третью цифру заданного числа или сообщает, что третьей цифры нет.
+Console.WriteLine("Введите число");
+int num = Convert.ToInt32(Console.ReadLine());
+if (num < -99 || num > 99)
+{
+    if (num > 0) Console.WriteLine($"Третья цифра = {num.ToString()[2]}");
+    else Console.WriteLine($"Третья цифра = {num.ToString()[3]}");
+}
+else Console.WriteLine("Третьей цифры нет");
